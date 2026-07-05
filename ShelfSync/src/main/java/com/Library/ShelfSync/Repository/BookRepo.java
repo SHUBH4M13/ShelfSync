@@ -1,10 +1,9 @@
 package com.Library.ShelfSync.Repository;
 
-import com.Library.ShelfSync.Models.RoleEntity;
+import com.Library.ShelfSync.Models.BookEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface RoleRepo extends JpaRepository<RoleEntity , Long> {
-
+public interface BookRepo extends JpaRepository<BookEntity,Long> {
 }
