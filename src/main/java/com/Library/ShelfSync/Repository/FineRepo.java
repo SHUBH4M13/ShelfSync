@@ -1,9 +1,10 @@
 package com.Library.ShelfSync.Repository;
 
-import com.Library.ShelfSync.Models.CategoryEntity;
+import com.Library.ShelfSync.Models.FineEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CategoryRepo extends JpaRepository<CategoryEntity, Long> {
+public interface FineRepo extends JpaRepository<FineEntity , Integer> {
+
 }

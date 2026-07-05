@@ -57,11 +57,11 @@ public class UserEntity {
     @JoinColumn(name = "role_id")
     private RoleEntity role;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
