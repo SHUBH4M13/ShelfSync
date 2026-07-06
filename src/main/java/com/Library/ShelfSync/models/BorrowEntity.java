@@ -1,4 +1,4 @@
-package com.Library.ShelfSync.Models;
+package com.Library.ShelfSync.models;
 
 import com.Library.ShelfSync.enums.BorrowStatus;
 import jakarta.persistence.*;

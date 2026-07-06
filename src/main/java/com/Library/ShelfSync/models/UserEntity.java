@@ -1,7 +1,6 @@
-package com.Library.ShelfSync.Models;
+package com.Library.ShelfSync.models;
 
 import com.Library.ShelfSync.enums.AccountStatus;
-import com.Library.ShelfSync.enums.RoleName;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -56,6 +55,14 @@ public class UserEntity {
     @ManyToOne
     @JoinColumn(name = "role_id")
     private RoleEntity role;
+
+    public UserEntity(String firstName, String lastName, String email, String password, String phoneNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.phoneNumber = phoneNumber;
+    }
 
     public Long getId() {
         return id;

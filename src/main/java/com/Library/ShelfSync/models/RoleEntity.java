@@ -1,4 +1,4 @@
-package com.Library.ShelfSync.Models;
+package com.Library.ShelfSync.models;
 
 import com.Library.ShelfSync.enums.RoleName;
 import jakarta.persistence.*;
@@ -11,9 +11,9 @@ public class RoleEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public RoleEntity(Long id, RoleName roleName) {
+    public RoleEntity(Long id, RoleName RoleName) {
         this.id = id;
-        this.roleName = roleName;
+        this.roleName = RoleName;
     }
 
     @Enumerated(EnumType.STRING)
@@ -22,11 +22,11 @@ public class RoleEntity {
     public RoleEntity() {
     }
 
-    public RoleName getroleName() {
+    public RoleName getRoleName() {
         return roleName;
     }
 
-    public void setroleName(RoleName roleName) {
+    public void setRoleName(RoleName roleName) {
         this.roleName = roleName;
     }
 

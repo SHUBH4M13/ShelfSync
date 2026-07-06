@@ -1,4 +1,4 @@
-package com.Library.ShelfSync.Models;
+package com.Library.ShelfSync.models;
 
 import jakarta.persistence.*;
 
