@@ -10,7 +10,7 @@ public class AuthorEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false , length = 50 , unique = true)
+    @Column(nullable = false , length = 100 , unique = true)
     private String name;
 
     public Long getId() {

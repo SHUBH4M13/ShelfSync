@@ -3,7 +3,6 @@ package com.Library.ShelfSync.config;
 import com.Library.ShelfSync.models.UserEntity;
 import com.Library.ShelfSync.repository.UserRepo;
 import com.Library.ShelfSync.services.Jwtservice;
-import io.jsonwebtoken.io.IOException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -32,7 +31,7 @@ public class JwtFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request,
                                     HttpServletResponse response,
                                     FilterChain filterChain)
-            throws ServletException, IOException, java.io.IOException {
+            throws ServletException, java.io.IOException {
 
         String authHeader = request.getHeader(HttpHeaders.AUTHORIZATION);
 
@@ -59,9 +58,7 @@ public class JwtFilter extends OncePerRequestFilter {
                                 null,
                                 Collections.singletonList(
                                         new SimpleGrantedAuthority(
-                                                user.getRole()
-                                                        .getRoleName()
-                                                        .name()
+                                                "ROLE_" + user.getRole().getRoleName().name()
                                         )
                                 )
                         );

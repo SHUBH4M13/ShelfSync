@@ -5,37 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ddd3d7b-f9c0-49c7-9061-962aa995d815" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/config/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/controller/AuthorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/dto/AuthorRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/dto/BookRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/services/AuthorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/services/BookService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/AuthorEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/AuthorEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/BookEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/BookEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/BorrowEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/BorrowEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/CategoryEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/CategoryEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/FineEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/FineEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/FinePaymentEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/FinePaymentEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/PublisherEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/PublisherEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/RoleEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/RoleEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/WishlistEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/WishlistEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/AuthorRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/AuthorRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/BookRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/BookRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/BorrowRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/BorrowRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/CategoryRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/CategoryRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/FinePaymentRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/FinePaymentRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/FineRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/FineRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/PublisherRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/PublisherRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/RoleRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/RoleRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/UserRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/UserRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/WishlistRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/WishlistRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/ShelfSyncApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/ShelfSyncApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/enums/AccountStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/enums/AccountStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/enums/BorrowStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/enums/BorrowStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/enums/PaymentStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/enums/PaymentStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/enums/RoleName.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/enums/RoleName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/config/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/config/JwtFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/models/AuthorEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/models/AuthorEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/AuthorRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/AuthorRepo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
