@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ddd3d7b-f9c0-49c7-9061-962aa995d815" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/controller/AuthorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/dto/AuthorRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/dto/BookRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/services/AuthorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/services/BookService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/config/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/config/JwtFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/models/AuthorEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/models/AuthorEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/AuthorRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/AuthorRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/controller/AuthorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/controller/AuthorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/services/AuthorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/services/AuthorService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
