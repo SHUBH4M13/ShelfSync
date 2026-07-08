@@ -34,8 +34,8 @@ public class AuthorController {
 
     @PreAuthorize("hasAnyRole('LIBRARIAN' , 'ADMIN')")
     @PatchMapping("/api/author/edit/{id}")
-    AuthorEntity handleEditAuthor(@PathVariable Long id){
-
+    AuthorEntity handleEditAuthor(@PathVariable Long id , @RequestBody AuthorRequest authorRequest){
+        return authorService.handleEditAuthor(id,authorRequest);
     }
 
     @PreAuthorize("hasAnyRole('LIBRARIAN' , 'ADMIN')")
