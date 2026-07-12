@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ddd3d7b-f9c0-49c7-9061-962aa995d815" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/controller/PublisherController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/dto/CategoryRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/dto/PublisherRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/services/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/services/PublisherService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/controller/BookController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/controller/AuthorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/controller/AuthorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/PublisherRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/PublisherRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/AuthorEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Models/AuthorEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/AuthorRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/AuthorRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/config/JwtFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/config/JwtFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/BookRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/BookRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/services/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/services/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/CategoryRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/CategoryRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/PublisherRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/PublisherRepo.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,20 +76,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ShelfSyncApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/shubhamkarna/Desktop/ShelfSync",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ShelfSyncApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/shubhamkarna/Desktop/ShelfSync&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ShelfSyncApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Library.ShelfSync.ShelfSyncApplication" />
@@ -167,11 +162,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/CategoryRepo.java</url>
-          <line>7</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.IllegalStateException" package="java.lang" />
           <option name="timeStamp" value="4" />
