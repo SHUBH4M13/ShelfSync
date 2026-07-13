@@ -4,7 +4,11 @@ import com.Library.ShelfSync.models.CategoryEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface CategoryRepo extends JpaRepository<CategoryEntity, Long> {
     boolean existsByName(String name);
+
+    Optional<CategoryEntity> findByName(String categoryName);
 }

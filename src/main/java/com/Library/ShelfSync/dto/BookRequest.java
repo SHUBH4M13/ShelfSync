@@ -8,15 +8,26 @@ public class BookRequest {
 
     private String isbn;
     private String title;
-
-    public BookRequest() {
-    }
-
     private String description;
     private String language;
     private String edition;
-    private AuthorEntity author;
-    private PublisherEntity publisher;
+
+    private Long authorId;
+    private String authorName;
+
+    private Long publisherId;
+    private String publisherName;
+
+    private Long categoryId;
+    private String categoryName;
+
+
+    private String shelfNumber;
+    private Integer totalCopies;
+    private Integer availableCopies;
+
+    public BookRequest() {
+    }
 
     public String getIsbn() {
         return isbn;
@@ -58,28 +69,52 @@ public class BookRequest {
         this.edition = edition;
     }
 
-    public AuthorEntity getAuthor() {
-        return author;
+    public Long getAuthorId() {
+        return authorId;
     }
 
-    public void setAuthor(AuthorEntity author) {
-        this.author = author;
+    public void setAuthorId(Long authorId) {
+        this.authorId = authorId;
     }
 
-    public CategoryEntity getCategory() {
-        return category;
+    public String getAuthorName() {
+        return authorName;
     }
 
-    public void setCategory(CategoryEntity category) {
-        this.category = category;
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
     }
 
-    public PublisherEntity getPublisher() {
-        return publisher;
+    public Long getPublisherId() {
+        return publisherId;
     }
 
-    public void setPublisher(PublisherEntity publisher) {
-        this.publisher = publisher;
+    public void setPublisherId(Long publisherId) {
+        this.publisherId = publisherId;
+    }
+
+    public String getPublisherName() {
+        return publisherName;
+    }
+
+    public void setPublisherName(String publisherName) {
+        this.publisherName = publisherName;
+    }
+
+    public Long getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 
     public String getShelfNumber() {
@@ -106,23 +141,22 @@ public class BookRequest {
         this.availableCopies = availableCopies;
     }
 
-    public BookRequest(String isbn, String title, String description, String language, String edition, PublisherEntity publisher, AuthorEntity author, CategoryEntity category, String shelfNumber, Integer availableCopies, Integer totalCopies) {
+    public BookRequest(String isbn, String title, String description, String language, String edition, Long authorId, String authorName, Long publisherId, String publisherName, Long categoryId, String categoryName, String shelfNumber, Integer totalCopies, Integer availableCopies) {
         this.isbn = isbn;
         this.title = title;
         this.description = description;
         this.language = language;
         this.edition = edition;
-        this.publisher = publisher;
-        this.author = author;
-        this.category = category;
+        this.authorId = authorId;
+        this.authorName = authorName;
+        this.publisherId = publisherId;
+        this.publisherName = publisherName;
+        this.categoryId = categoryId;
+        this.categoryName = categoryName;
         this.shelfNumber = shelfNumber;
-        this.availableCopies = availableCopies;
         this.totalCopies = totalCopies;
+        this.availableCopies = availableCopies;
     }
 
-    private CategoryEntity category;
-    private String shelfNumber;
-    private Integer totalCopies;
-    private Integer availableCopies;
 
 }
