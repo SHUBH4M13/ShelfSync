@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ddd3d7b-f9c0-49c7-9061-962aa995d815" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/specification/BookSpecification.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/dto/BookRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/dto/BookRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/AuthorRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/AuthorRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/controller/BookController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/BookRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/BookRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/CategoryRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/CategoryRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/PublisherRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/PublisherRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/services/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/services/BookService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

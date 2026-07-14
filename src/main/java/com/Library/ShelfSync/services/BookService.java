@@ -9,9 +9,12 @@ import com.Library.ShelfSync.repository.AuthorRepo;
 import com.Library.ShelfSync.repository.BookRepo;
 import com.Library.ShelfSync.repository.CategoryRepo;
 import com.Library.ShelfSync.repository.PublisherRepo;
+import com.Library.ShelfSync.specification.BookSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 import java.util.Optional;
@@ -31,11 +34,30 @@ public class BookService {
     @Autowired
     private CategoryRepo categoryRepo;
 
-    public List<BookEntity> handleGetAllBooks() {
-        return bookRepo.findAll();
+    public Page<BookEntity> handleGetAllBooks(Pageable pageable , String Title , String author , String publisher , String Category) {
+
+        Specification<BookEntity> spec = Specification.allOf();
+
+        if( Title != null && !Title.isBlank() ){
+            spec = spec.and(BookSpecification.hasTitle(Title));
+        }
+
+        if( author != null && !author.isBlank() ){
+            spec = spec.and(BookSpecification.hasAuthor(author));
+        }
+
+        if( publisher != null && !publisher.isBlank() ){
+            spec = spec.and(BookSpecification.hasPublisher(publisher));
+        }
+
+        if( Category != null && !Category.isBlank() ){
+            spec = spec.and(BookSpecification.hasCategory(Category));
+        }
+
+        return bookRepo.findAll(spec , pageable);
     }
 
-    public Optional<BookEntity> handleGetBook(Long id) {
+    public Optional<BookEntity> handleGetBookById(Long id) {
         return bookRepo.findById(id);
     }
 
@@ -112,5 +134,7 @@ public class BookService {
 
         return bookRepo.save(book);
     }
+
+
 
 }
