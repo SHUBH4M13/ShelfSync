@@ -11,15 +11,20 @@ public class RoleEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Enumerated(EnumType.STRING)
+    private RoleName roleName;
+
+
     public RoleEntity(Long id, RoleName RoleName) {
         this.id = id;
         this.roleName = RoleName;
     }
 
-    @Enumerated(EnumType.STRING)
-    private RoleName roleName;
-
     public RoleEntity() {
+    }
+
+    public RoleEntity(RoleName roleName) {
+        this.roleName = roleName;
     }
 
     public RoleName getRoleName() {

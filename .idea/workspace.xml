@@ -5,11 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ddd3d7b-f9c0-49c7-9061-962aa995d815" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/specification/BookSpecification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/config/DataInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/controller/BorrowController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/dto/BorrowRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/services/BorrowService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/specification/BorrowSpecification.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/BookRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/BookRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/services/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/services/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/models/RoleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/models/RoleEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/BorrowRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/BorrowRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/RoleRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/RoleRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Library/ShelfSync/repository/UserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/AuthorRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/AuthorRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/BookRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/BookRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/BorrowRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/BorrowRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/CategoryRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/CategoryRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/PublisherRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/Repository/PublisherRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/dto/BookRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/dto/BookRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/services/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Library/ShelfSync/services/BookService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
