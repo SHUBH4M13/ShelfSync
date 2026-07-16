@@ -7,7 +7,19 @@ import java.time.LocalDateTime;
 
 public class BorrowSpecification {
 
-    public static Specification<BorrowEntity> hasStudentName(String studentName){
+    public static Specification<BorrowEntity> hasId(Long Id){
+
+        if (Id == null) {
+            return null;
+        }
+
+        return((root, query, criteriaBuilder) ->
+                criteriaBuilder.equal(root.get("id"),Id));
+    }
+
+
+
+        public static Specification<BorrowEntity> hasStudentName(String studentName){
 
         if (studentName == null || studentName.isBlank()) {
             return null;

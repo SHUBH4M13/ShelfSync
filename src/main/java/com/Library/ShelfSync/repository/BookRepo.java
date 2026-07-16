@@ -12,4 +12,6 @@ public interface BookRepo extends JpaRepository<BookEntity,Long> , JpaSpecificat
     Optional<BookEntity> findById(Long id);
 
     boolean existsByIsbn(String isbn);
+
+    Optional<BookEntity> findByTitle(String studentEmail);
 }

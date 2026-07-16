@@ -5,7 +5,6 @@ import org.springframework.data.jpa.domain.Specification;
 
 public class BookSpecification {
 
-
     public static Specification<BookEntity> hasTitle(String Title) {
 
         return (root, query, cb) ->
