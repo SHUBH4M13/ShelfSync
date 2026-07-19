@@ -9,7 +9,6 @@ import com.Library.ShelfSync.models.UserEntity;
 import com.Library.ShelfSync.repository.BookRepo;
 import com.Library.ShelfSync.repository.BorrowRepo;
 import com.Library.ShelfSync.repository.UserRepo;
-import com.Library.ShelfSync.specification.BookSpecification;
 import com.Library.ShelfSync.specification.BorrowSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -58,7 +57,7 @@ public class BorrowService {
 
 
     @Transactional
-    public void CreateBorrow(BorrowRequest borrowRequest){
+    public BorrowEntity CreateBorrow(BorrowRequest borrowRequest){
 
         UserEntity studentUser = userRepo.findByEmail(borrowRequest.getStudent_email())
                 .orElseThrow(() -> new RuntimeException("Student not found"));
@@ -92,6 +91,7 @@ public class BorrowService {
 
         borrowRepo.save(borrow);
 
+        return borrow;
     }
 
 }

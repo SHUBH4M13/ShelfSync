@@ -1,5 +1,6 @@
 package com.Library.ShelfSync.controller;
 
+import com.Library.ShelfSync.dto.BorrowRequest;
 import com.Library.ShelfSync.models.BorrowEntity;
 import com.Library.ShelfSync.services.BookService;
 import com.Library.ShelfSync.services.BorrowService;
@@ -8,10 +9,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 
@@ -27,6 +27,7 @@ public class BorrowController {
             @RequestParam(required = false) String studentName,
             @RequestParam(required = false) String bookName,
             @RequestParam(required = false) LocalDateTime issueDate,
+            @RequestParam(required = false) Long id,
             @RequestParam (defaultValue = "1" , required = false) int PageNo ,
             @RequestParam (defaultValue = "5" , required = false) int PageSize ,
             @RequestParam (defaultValue = "id") String sortBy ,
@@ -43,8 +44,17 @@ public class BorrowController {
 
         Pageable pageable = PageRequest.of(PageNo - 1 , PageSize , sort );
 
-        return borrowService.FindBorrow(pageable , studentName , bookName , issueDate);
+        return borrowService.FindBorrow(pageable , id ,studentName , bookName , issueDate);
 
+    }
+
+    @PostMapping("create")
+    private ResponseEntity<BorrowEntity> handleCreateBorrow(@RequestBody BorrowRequest borrowRequest){
+        BorrowEntity borrow = borrowService.CreateBorrow(borrowRequest);
+
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body(borrow);
     }
 
 }
