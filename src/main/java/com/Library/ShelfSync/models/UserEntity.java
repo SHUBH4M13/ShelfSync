@@ -27,21 +27,8 @@ public class UserEntity {
     @Column(nullable = false , length = 255)
     private String password;
 
-    public UserEntity(Integer id, String firstName, String lastName, String email, String password, String phoneNumber, AccountStatus accountStatus, LocalDateTime createdAt, LocalDateTime updatedAt, RoleEntity role) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-        this.phoneNumber = phoneNumber;
-        this.accountStatus = accountStatus;
-        this.role = role;
-    }
-
     @Column(unique = true)
     private String phoneNumber;
-
-    public UserEntity() {
-    }
 
     @Enumerated(EnumType.STRING)
     private AccountStatus accountStatus;
@@ -55,6 +42,20 @@ public class UserEntity {
     @ManyToOne
     @JoinColumn(name = "role_id")
     private RoleEntity role;
+
+    public UserEntity(Integer id, String firstName, String lastName, String email, String password, String phoneNumber, AccountStatus accountStatus, LocalDateTime createdAt, LocalDateTime updatedAt, RoleEntity role) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.phoneNumber = phoneNumber;
+        this.accountStatus = accountStatus;
+        this.role = role;
+    }
+
+    public UserEntity() {
+    }
+
 
     public UserEntity(String firstName, String lastName, String email, String password, String phoneNumber) {
         this.firstName = firstName;

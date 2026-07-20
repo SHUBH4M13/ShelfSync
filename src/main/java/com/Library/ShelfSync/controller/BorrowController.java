@@ -11,6 +11,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -23,6 +24,7 @@ public class BorrowController {
     private BorrowService borrowService;
 
     @GetMapping
+    @PreAuthorize("")
     private Page<BorrowEntity> handleGetBorrow(
             @RequestParam(required = false) String studentName,
             @RequestParam(required = false) String bookName,
@@ -55,6 +57,22 @@ public class BorrowController {
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(borrow);
+    }
+
+    @PatchMapping("/edit/{id}/return")
+    private BorrowEntity editBorrow(@PathVariable Long id){
+       return borrowService.returnBorrow(id);
+    }
+
+    @PatchMapping("/edit/{id}/extend")
+    private BorrowEntity extendBorrow(@PathVariable Long id){
+        return borrowService.extendBorrow(id);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    private ResponseEntity<Void> deleteBorrow(@PathVariable Long id){
+            borrowService.deleteBorrow(id);
+            return ResponseEntity.noContent().build();
     }
 
 }

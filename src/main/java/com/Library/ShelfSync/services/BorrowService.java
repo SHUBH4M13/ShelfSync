@@ -94,4 +94,47 @@ public class BorrowService {
         return borrow;
     }
 
+    @Transactional
+    public BorrowEntity returnBorrow(Long id){
+
+        BorrowEntity borrow = borrowRepo.findById(id)
+                .orElseThrow( () -> new RuntimeException("Book not found"));
+
+        BookEntity book = bookRepo.findById(borrow.getBook().getId())
+                        .orElseThrow(() -> new RuntimeException("Book not found"));
+
+        book.setAvailableCopies(book.getAvailableCopies() + 1 );
+
+        //FINE MODULE REMAINING
+
+        borrow.setReturnDate(LocalDateTime.now());
+
+        borrow.setBorrowStatus(BorrowStatus.RETURNED);
+
+        return borrow;
+    }
+
+    public BorrowEntity extendBorrow(Long id){
+
+        BorrowEntity borrow = borrowRepo.findById(id)
+                .orElseThrow( () -> new RuntimeException("Borrow record not found"));
+
+        if (borrow.getBorrowStatus() == BorrowStatus.RETURNED) {
+            throw new RuntimeException("Cannot extend due date. Book has already been returned.");
+        }
+
+        LocalDateTime currentDueDate = borrow.getDueDate();
+
+        borrow.setDueDate(currentDueDate.plusDays(10));
+
+        borrowRepo.save(borrow) ;
+
+        return borrow;
+    }
+
+
+    public void deleteBorrow(Long id){
+        borrowRepo.deleteById(id);
+    }
+
 }

@@ -25,6 +25,12 @@ public class FinePaymentEntity {
     @Column(nullable = false)
     private Integer fineAmount;
 
+    @CreationTimestamp
+    private LocalDateTime paymentDate;
+
+    @Enumerated(EnumType.STRING)
+    private PaymentStatus paymentStatus;
+
     public Long getId() {
         return id;
     }
@@ -82,12 +88,6 @@ public class FinePaymentEntity {
     public void setPaymentStatus(PaymentStatus paymentStatus) {
         this.paymentStatus = paymentStatus;
     }
-
-    @CreationTimestamp
-    private LocalDateTime paymentDate;
-
-    @Enumerated(EnumType.STRING)
-    private PaymentStatus paymentStatus;
 
 
 }
