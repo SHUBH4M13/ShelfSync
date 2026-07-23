@@ -1,6 +1,10 @@
 package com.Library.ShelfSync.services;
 
+import com.Library.ShelfSync.enums.AccountStatus;
+import com.Library.ShelfSync.enums.RoleName;
+import com.Library.ShelfSync.models.RoleEntity;
 import com.Library.ShelfSync.models.UserEntity;
+import com.Library.ShelfSync.repository.RoleRepo;
 import com.Library.ShelfSync.repository.UserRepo;
 import com.Library.ShelfSync.specification.UserSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +18,9 @@ public class UserService {
 
     @Autowired
     private UserRepo userRepo;
+
+    @Autowired
+    private RoleRepo roleRepo;
 
     public Page<UserEntity> findUser(Pageable pageable , Long id , String firstName , String phoneNumber , String accountStatus , String roleName  ){
 
@@ -40,6 +47,36 @@ public class UserService {
 
         return userRepo.findAll(pageable , spec);
 
+
+    }
+
+    public UserEntity addLibrarian(Long id){
+
+        UserEntity user = userRepo.findById(id)
+                .orElseThrow( () ->  new RuntimeException("User not found"));
+
+        RoleEntity librarianRole = roleRepo.findByRoleName(RoleName.LIBRARIAN)
+                .orElseThrow(() -> new RuntimeException("Role not found"));
+
+        user.setRole(librarianRole);
+
+        return userRepo.save(user);
+
+    }
+
+    public UserEntity findUserById(Long id){
+        return userRepo.findById(id)
+                .orElseThrow(() -> new RuntimeException("user not found"));
+    }
+
+    public AccountStatus updateAccStatus(Long id , AccountStatus accStatus){
+
+        UserEntity user = userRepo.findById(id)
+                .orElseThrow(() -> new RuntimeException("user not found"));
+
+        user.setAccountStatus(accStatus);
+
+        return accStatus;
 
     }
 
