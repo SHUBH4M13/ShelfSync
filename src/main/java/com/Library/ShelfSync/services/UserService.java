@@ -44,8 +44,7 @@ public class UserService {
         if( roleName != null || !roleName.isBlank() ){
             spec = spec.and(UserSpecification.hasRole(roleName));
         }
-
-        return userRepo.findAll(pageable , spec);
+        return userRepo.findAll(spec, pageable);
 
 
     }

@@ -66,7 +66,7 @@ public class DataInitializer implements CommandLineRunner {
 
     private void initializeAdmin(){
 
-        if(userRepo.existsByEmail("admin@shelfsync.com")){
+        if(userRepo.existsByEmail(adminEmail)){
             return;
         }
 

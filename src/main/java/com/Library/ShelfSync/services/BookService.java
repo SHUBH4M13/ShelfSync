@@ -16,6 +16,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
+import java.awt.print.Book;
 import java.util.List;
 import java.util.Optional;
 
@@ -135,6 +136,56 @@ public class BookService {
         return bookRepo.save(book);
     }
 
+    //Controller remaining
+    public BookEntity updateBook( Long id , BookRequest request){
 
+        BookEntity book = bookRepo.findById(id)
+                .orElseThrow(() -> new RuntimeException("book not found"));
+
+        book.setTitle(request.getTitle());
+        book.setDescription(request.getDescription());
+        book.setLanguage(request.getLanguage());
+        book.setEdition(request.getEdition());
+        book.setShelfNumber(request.getShelfNumber());
+
+        AuthorEntity author = authorRepo.findById(request.getAuthorId())
+                .orElseThrow(() -> new RuntimeException("Author not found"));
+
+        book.setAuthor(author);
+
+        PublisherEntity publisher = publisherRepo.findById(request.getPublisherId())
+                .orElseThrow(() -> new RuntimeException("publisher not found"));
+
+        book.setPublisher(publisher);
+
+        CategoryEntity category = categoryRepo.findById(request.getCategoryId())
+                .orElseThrow(() -> new RuntimeException("category not found"));
+
+        book.setCategory(category);
+
+        int borrowedCopies =
+                book.getTotalCopies() - book.getAvailableCopies();
+
+        if (request.getTotalCopies() < borrowedCopies) {
+            throw new RuntimeException("Total copies cannot be less than borrowed copies");
+        }
+
+        return bookRepo.save(book);
+
+    }
+
+    //Controller remaining
+    public void deleteBook(Long id){
+
+        BookEntity book = bookRepo.findById(id)
+                .orElseThrow( () -> new RuntimeException("book not found"));
+
+        if( book.getAvailableCopies() != book.getTotalCopies()){
+                throw new RuntimeException("Someone has taken the book");
+        }
+
+        bookRepo.deleteById(id);
+
+    }
 
 }
